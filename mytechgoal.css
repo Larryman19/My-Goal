@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 1em 0;
+    text-align: left;
+}
+div {
+    padding: 1rem;
+}
+nav{
+    height: 80%;
+    width: 100%;
+    color: rgb(48, 48, 202);
+    margin-bottom: 40px;
+    padding: 2px;
+    background-color: rgb(210, 187, 187);
+}
+nav li {
+    padding: 0;
+    margin: 5px;
+}
+nav ul{
+    text-decoration: none;
+    display: inline;
+}
+a{
+    width: 100px;
+    text-decoration: 1rem;
+    color: rgb(26, 34, 49);
+    text-align: 2px;
+ }
+ .footer{
+    background-color: rgba(46, 223, 15, 0.548);
+    text-align: center;
+    padding: 1rem;
+ }
+.slackProfilePicture{
+    height: auto;
+    width: auto;
+ }
+.slackDisplayName{
+    margin: 20px;
+    font-size: 2rem;
+    border: 2px;
+}      
+.current-time{
+    font-size: large;
+    float: none;
+}    
+.currentEmail{
+    float: none;
+    text-align: justify;
+}
+.mything h1{
+        margin-top: 5vh;
+        text-align: center;
+}
+ 
