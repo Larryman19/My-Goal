@@ -1,66 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+ header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+.slackProfilePicture {
+            display: flex;
+            align-items: center;
+        }
+.slackProfilePicture img {
+            border-radius: 50%;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+        }
+.current-time, .currentEmail {
+            margin: 10px 0;
+        }
+.currentEmail input[type="email"], .currentEmail input[type="submit"] {
+            display: block;
+            margin-top: 5px;
+        }
+.mything {
+            padding: 20px;
+        }
+nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+nav ul li {
+            margin: 10px 0;
+        }
+nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+.footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
 header {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    padding: 1em 0;
-    text-align: left;
-}
-div {
-    padding: 1rem;
-}
-nav{
-    height: 80%;
-    width: 100%;
-    color: rgb(48, 48, 202);
-    margin-bottom: 40px;
-    padding: 2px;
-    background-color: rgb(210, 187, 187);
-}
-nav li {
-    padding: 0;
-    margin: 5px;
-}
-nav ul{
-    text-decoration: none;
-    display: inline;
-}
-a{
-    width: 100px;
-    text-decoration: 1rem;
-    color: rgb(26, 34, 49);
-    text-align: 2px;
- }
- .footer{
-    background-color: rgba(46, 223, 15, 0.548);
-    text-align: center;
-    padding: 1rem;
- }
-.slackProfilePicture{
-    height: auto;
-    width: auto;
- }
-.slackDisplayName{
-    margin: 20px;
-    font-size: 2rem;
-    border: 2px;
-}      
-.current-time{
-    font-size: large;
-    float: none;
-}    
-.currentEmail{
-    float: none;
-    text-align: justify;
-}
-.mything h1{
-        margin-top: 5vh;
-        text-align: center;
-}
- 
+             flex-direction: column;
+            align-items: flex-start;
+            }
+.slackProfilePicture, .current-time, .currentEmail {
+                width: 100%;
+            }
+.currentEmail input[type="email"], .currentEmail input[type="submit"] {
+                width: calc(100% - 20px);
+                margin-left: 10px;
+            }
+        }
