@@ -11,15 +11,9 @@
             padding: 10px;
             background-color: #f8f9fa;
         }
-.slackProfilePicture {
-            display: flex;
-            align-items: center;
-        }
 .slackProfilePicture img {
-            border-radius: 50%;
             width: auto;
             height: auto;
-            margin-right: 10px;
         }
 .current-time, .currentEmail {
             margin: 10px 0;
