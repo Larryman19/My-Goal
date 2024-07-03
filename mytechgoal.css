@@ -22,8 +22,14 @@
             display: block;
             margin-top: 5px;
         }
+.SlackDisplayName{
+            text-align: center;
+         }
 .mything {
             padding: 20px;
+            margin-top: 15vh;
+            margin-bottom: 15vh;
+            text-align: center;
         }
 nav ul {
             list-style-type: none;
