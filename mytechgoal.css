@@ -42,13 +42,13 @@ nav ul li a {
             text-decoration: none;
             color: #007bff;
         }
-.footer {
+footer .footer{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 2rem;
             text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            font-size: 15px;
         }
 
 /* Responsive Styles */
