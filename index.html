@@ -4,80 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mytechgoal</title>
-    <link rel="stylesheet" media="screen and (min-width: 480px)" href="mytechgoal.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <header>
-        <div class="slackProfilePicture" data-testid="slackProfilePicture" >
-            <img src="IMG_4558.JPG" alt="profile picture">
-            <p class="slackDisplayName" data-testid="slackDisplayName"> OLANREWAJU ABIOLA MOHOOD</p>  
+        <div class="collect">
+        <div>
+            <img id="max" data-testid="slackProfilePicture" src="https://ca.slack-edge.com/T07466B189M-U07A1TWQ59Q-8a629f5d490e-512" alt="profile picture">
         </div>
-        <div class="current-time" data-testid="current-time" id="current-time">
-            <input type="time" name="UTC" id="current-time">
+            <div class="DisplayName">
+            <p data-testid="slackDisplayName"> 
+                <strong>NAME:</strong>
+                OLANREWAJU ABIOLA MOHOOD
+            </p>  
+            <p>
+                <strong>TRACK:</strong>
+                Front-End Web Developer
+            </p>
+            <p>
+                <strong>E-mail:</strong>
+                <a  data-testid="slackEmail" href="E-mailto: Oabiola768@gmail.com">Oabiola768@gmail.com</a>
+            </p>
+            <div class="timetap">
+                <p data-testid="currentTimeUTC">
+                    Time:
+                    <span id="Time">5:58 PM</span>
+                </p>
+                <p data-testid="currentDay">
+                    Current Day:
+                    <span id="day">Wednesday</span>
+                </p>
+            </div>
         </div>
-        <div class="currentEmail" data-testid="currentEmail">
-            <label for="E-mail">E-mail Address</label><br>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </div>
+      </div>
     </header>
-    <div class="mything">   
-        <h1>MY GOAL FOR THE NEXT 2 YEAR IN TECH FIELD</h1>
-    <nav>
-        <ul>
-            <li> Master Javascript and framework either React or Angular</li>
-        </ul>
-        <ul>
-            <li> 
-              <a data-testid="keywordLink" href="http://keyword.dog/">Use the opportunity given by HNG internship to network more and sharpen my skill</a>  
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a data-testid="hngLink" href="http://hng.tech/learn">Make sure i get to stage 10 in the internship</a>
-            </li>
-            
-        </ul>
-        <ul>
+    <section>   
+        <h3>MY GOAL FOR THE NEXT 2 YEAR IN TECH FIELD</h3>
+        <h6>i am Abiola an aspiring sofware developer, My plan for the next two years is to build a solid Career in tech.
+            i start my tech journey in Front-End web development through the HNG internship program. this are my goal in the next two year;
+        </h6>
+            <ul>
+            <li> Master Javascript and framework either React or Angular</li> 
+            <li>Use the opportunity given by HNG internship to network more and sharpen my skill</li>
+            <li>Make sure i get to stage 10 in the internship</a>
             <li>Build a strong portfolio with few people i have meet here and also my personal portfolio</li>
-
-        </ul>
-        <ul>
-            <li>
-               <a data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/">Apply for Front-End jobs after my time at HNG internship</a> 
-            </li>
-        </ul>
-        <ul>
+            <li>Apply for Front-End jobs after my time at HNG internship</li> 
             <li>After securing a Junior web development job(Front-End), will start learning back-end</li>
-        </ul>
-        <ul>
             <li>within two years, i want to become a full stack developer</li>
         </ul>
-    </nav>
-</div>
+    </section>
     <footer class="footer">
+        <div>
+            <p> link to follow to know more about HNG internship program.</p>
+            <ul>
+                <li>
+                    <a data-testid="hngLink" href="http://hng.tech/learn">Learn About HNG</a>
+                </li>
+                <li>
+                    <a data-testid="keywordLink" href="http://keyword.dog/">Learn About Keyword</a>
+                </li>
+                <li>
+                    <a data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/">Learn ABout scrapeanyweb</a>
+                </li>
+            </ul>
+        </div>
         <div>  copyright &copy; Abiola</div>
     </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-    function updateTime() {
-        const currentTimeElement = document.getElementById('current-time');
-        const now = new Date();
-        
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const day = daysOfWeek[now.getDay()];
-        
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        
-        const timeString = `${hours}:${minutes}:${seconds}`;
-        currentTimeElement.textContent = `Today is ${day}, Time: ${timeString}`;
-    }
+        function updateTimeAndDay() {
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const now = new Date();
+            
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const formattedHours = hours % 12 || 12;
+            const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            const currentTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+            const currentDay = days[now.getDay()];
 
-    updateTime();
-    setInterval(updateTime, 1000); // Update time every second
-});
+            document.getElementById('Time').textContent = currentTime;
+            document.getElementById('day').textContent = currentDay;
+        }
+
+        updateTimeAndDay();
+        setInterval(updateTimeAndDay, 60000); // Update every minute
     </script>
 </body>
 </html>
+          
+  
